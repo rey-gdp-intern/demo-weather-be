@@ -14,7 +14,7 @@ metadata:
     google.com/cloudbuild-repo-name: 'api-antrein'
     google.com/cloudbuild-location: 'asia-east1'
     github.com/project-slug: 'rey-gdp-intern/demo-weather-be'
-    backstage.io/techdocs-ref: url:https://demo-weather-be-techdocs.glair.id  # Add the TechDocs annotation
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: group:sre
