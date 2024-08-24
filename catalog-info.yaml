@@ -19,3 +19,53 @@ spec:
   type: service
   owner: group:sre
   lifecycle: experimental
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: "demo-weather-be-api"
+  description: "API for the Demo Weather Backend service"
+  annotations:
+    backstage.io/techdocs-ref: url:https://demo-weather-be-api-techdocs.glair.id
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: group:sre
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: Demo Weather Backend API
+      version: 1.0.0
+    paths:
+      /api/weather:
+        get:
+          summary: Get current weather information
+          responses:
+            '200':
+              description: A JSON object containing current weather information
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      city:
+                        type: string
+                      temperature_2m:
+                        type: number
+                        format: float
+                      precipitation:
+                        type: number
+                        format: float
+                      rain:
+                        type: number
+                        format: float
+                      time:
+                        type: string
+                        format: date-time
+                    required:
+                      - city
+                      - temperature_2m
+                      - precipitation
+                      - rain
+                      - time
