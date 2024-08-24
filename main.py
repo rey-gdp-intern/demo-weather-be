@@ -43,6 +43,10 @@ def get_current_location():
         # Fallback to Jakarta's coordinates
         return -6.2088, 106.8456, "Jakarta"
 
+@app.get("/")
+async def root():
+    return "ok"
+
 @app.get("/api/weather")
 async def get_weather():
     # Get the user's current location or fallback to Jakarta
