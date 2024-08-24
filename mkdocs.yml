@@ -3,5 +3,9 @@ site_name: 'demo-weather-be-docs'
 nav:
   - Home: index.md
 
+theme:
+  name: material
+
 plugins:
+  - search
   - techdocs-core
