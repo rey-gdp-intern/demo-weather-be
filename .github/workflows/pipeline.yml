@@ -13,7 +13,7 @@ on:
 
 env:
   PROJECT_NAME: ${{ github.event.repository.name }}
-  PORT: 8080
+  PORT: 8000
 
   GCP_REGION: asia-southeast2
   GCP_ZONE: asia-southeast2-a
