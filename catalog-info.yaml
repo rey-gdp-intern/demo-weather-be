@@ -20,8 +20,8 @@ spec:
   owner: group:sre
   lifecycle: experimental
   providesApis:
-    - api:default/demo-weather-be-api  # Reference to the provided API
-  consumesApis: []  # Add any consumed APIs here, if applicable
+    - default/demo-weather-be-api
+  consumesApis: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
