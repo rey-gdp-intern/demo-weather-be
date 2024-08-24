@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "demo-weather-be"
+  links:
+    - title: Production
+      url: https://demo-weather-be.glair.id
+    - title: Staging
+      url: https://demo-weather-be-staging.glair.id
+    - title: Develop
+      url: https://demo-weather-be-develop.glair.id
+  annotations:
+    google.com/cloudbuild-project-slug: 'intern-infra'
+    google.com/cloudbuild-repo-name: 'api-antrein'
+    google.com/cloudbuild-location: 'asia-east1'
+    github.com/project-slug: 'rey-gdp-intern/demo-weather-be'
+    backstage.io/techdocs-ref: url:https://demo-weather-be-techdocs.glair.id  # Add the TechDocs annotation
+spec:
+  type: service
+  owner: group:sre
+  lifecycle: experimental
